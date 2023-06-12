@@ -1,0 +1,1 @@
+install(DIRECTORY smoke DESTINATION test)
