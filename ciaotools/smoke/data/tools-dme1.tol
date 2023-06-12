@@ -1,0 +1,14 @@
+!checksum
+!datasum
+!date
+!creator
+!histnum
+!ascdsver
+ERR_RATE=%0.01
+NET_ERR=%0.01
+BG_AREA=%1e-6
+NET_COUNTS=%1e-6
+NET_RATE=%1e-6
+!radecsys
+!radesys
+!equinox

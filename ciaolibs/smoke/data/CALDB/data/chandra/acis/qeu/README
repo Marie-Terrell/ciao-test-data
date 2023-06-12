@@ -1,0 +1,7 @@
+
+This is a modified version of the calibration file to 
+remove data for all but ccd_id=7
+
+
+dmcopy  acisD2000-01-29qeuN0006.fits"[AXAF_QEU8]" qeu.fits
+mv qeu.fits  acisD2000-01-29qeuN0006.fits

@@ -1,0 +1,5 @@
+This file has been modified to only retain data for CCD=7
+
+
+dmcopy "acisD1999-08-13contamN0004.fits[AXAF_CONTAM8]" contam.fits
+mv contam.fits acisD1999-08-13contamN0004.fits

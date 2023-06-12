@@ -1,0 +1,13 @@
+!checksum
+!datasum
+!date
+!creator
+!histnum
+!ascdsver
+tg_r=range(1e-6)
+tg_d=range(1e-6)
+tg_lam=range(1e-6)
+tg_mlam=range(1e-6)
+!radecsys
+!radesys
+!equinox

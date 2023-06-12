@@ -1,0 +1,17 @@
+*********** Unit Test #22 'OBSVISGui' ***********
+1. Testing OBSVISGui::New...PASSED
+2. Testing OBSVISGui::Delete...PASSED
+3. Testing multiple OBSVISGui::New...PASSED
+4. Testing multiple OBSVISGui::Delete...PASSED
+5. Testing 10 OBSVISGui::New/Delete sequences...PASSED
+6. Testing multiple OBSVISGui::Save/Load Basic...PASSED
+7. Testing  OBSVISGui::NewFov...PASSED
+8. Testing OBSVISGui::LoadImageFile...PASSED
+SUMMARY: 8 out of 8 tests passed
+*********** Unit Test #22 'OBSVISGui' PASSED ******
+
+UNIT TESTING SUMMARY: 
+#22 OBSVISGui PASSED
+TOTAL 1 out of 1 tests passed
+
+

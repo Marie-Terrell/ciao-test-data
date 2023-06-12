@@ -1,0 +1,254 @@
+t0.baryOE.testfiles/
+t0.baryOE.testfiles/orbitf063806700N002_eph0.fits
+t0.baryOE.testfiles/solarf063806700N002_eph0.fits
+t0.baryOE.testfiles/lunarf063806700N002_eph0.fits
+t0.baryOE.testfiles/orbitf063806700N002_eph1.fits
+t0.baryOE.testfiles/solarf063806700N002_eph1.fits
+t0.baryOE.testfiles/lunarf063806700N002_eph1.fits
+t0.baryOE.testfiles/DE00029.EPH
+t0.baryOE.testfiles/tolerances.txt
+
+Test Error Conditions:
+----------------------
+---> Could not open input file DE00028.EPH
+Error - Usage: processOE2 inputFileName outputFileDirectory [revision]
+
+Test Normal Functionality:
+--------------------------
+YYYY_DDD_HH:MM:SS    Log file:  DE00029.EPH.log
+YYYY_DDD_HH:MM:SS    ASCDS_DATA_TSTART: 2000_009_12_03_56_000
+YYYY_DDD_HH:MM:SS    ASCDS_DATA_TSTOP:  2000_079_12_03_56_000
+YYYY_DDD_HH:MM:SS    ASCDS_DATA_EPOCH:  2000_009_12_03_56_000
+
+Read 5 leap seconds:
+            365  2922  4018  5295  6390
+HH:MM:SS <<<< Orbit Ephemeris file DE00029.EPH
+              written to ./orbitf063806700N002_eph0.fits
+HH:MM:SS      written to ./solarf063806700N002_eph0.fits
+HH:MM:SS      written to ./lunarf063806700N002_eph0.fits
+HH:MM:SS <<<< Orbit Ephemeris file DE00029.EPH
+              written to ./orbitf063806700N002_eph1.fits
+HH:MM:SS      written to ./solarf063806700N002_eph1.fits
+HH:MM:SS      written to ./lunarf063806700N002_eph1.fits
+Infile 1:  lunarf063806700N002_eph0.fits
+Infile 2:  t0.baryOE.testfiles/lunarf063806700N002_eph0.fits
+
+TOLERANCE FILE PARAMETERS:
+keyword                    value          range         %range                   min                   max  ignorepath
+-------                    -----          -----         ------                   ---                   ---  ----------
+(checksum)                                                                                                             
+(DATE)                                                                                                                 
+(ASCDSVER)                                                                                                             
+
+-----------------------
+HEADER VALUE DIFFERENCES
+-----------------------
+
+
+Message:                                Keyword:              Value(s):                    Diff:
+--------                                 -------              ---------                    -----
+
+
+--------------------------
+SUBSPACE VALUE DIFFERENCES
+--------------------------
+
+Message:                         Column:       Row              Value(s):                    Diff:
+--------                         -------       ---              ---------                    -----
+
+
+
+TABLE NAME: LUNAREPHEM
+
+-----------------------
+TABLE VALUE DIFFERENCES
+-----------------------
+
+Message:                             Row:        Column:              Value(s):                    Diff:
+--------                             ----        -------              ---------                    -----
+
+Infile 1:  lunarf063806700N002_eph1.fits
+Infile 2:  t0.baryOE.testfiles/lunarf063806700N002_eph1.fits
+
+TOLERANCE FILE PARAMETERS:
+keyword                    value          range         %range                   min                   max  ignorepath
+-------                    -----          -----         ------                   ---                   ---  ----------
+(checksum)                                                                                                             
+(DATE)                                                                                                                 
+(ASCDSVER)                                                                                                             
+
+-----------------------
+HEADER VALUE DIFFERENCES
+-----------------------
+
+
+Message:                                Keyword:              Value(s):                    Diff:
+--------                                 -------              ---------                    -----
+
+
+--------------------------
+SUBSPACE VALUE DIFFERENCES
+--------------------------
+
+Message:                         Column:       Row              Value(s):                    Diff:
+--------                         -------       ---              ---------                    -----
+
+
+
+TABLE NAME: LUNAREPHEM
+
+-----------------------
+TABLE VALUE DIFFERENCES
+-----------------------
+
+Message:                             Row:        Column:              Value(s):                    Diff:
+--------                             ----        -------              ---------                    -----
+
+Infile 1:  orbitf063806700N002_eph0.fits
+Infile 2:  t0.baryOE.testfiles/orbitf063806700N002_eph0.fits
+
+TOLERANCE FILE PARAMETERS:
+keyword                    value          range         %range                   min                   max  ignorepath
+-------                    -----          -----         ------                   ---                   ---  ----------
+(checksum)                                                                                                             
+(DATE)                                                                                                                 
+(ASCDSVER)                                                                                                             
+
+-----------------------
+HEADER VALUE DIFFERENCES
+-----------------------
+
+
+Message:                                Keyword:              Value(s):                    Diff:
+--------                                 -------              ---------                    -----
+
+
+--------------------------
+SUBSPACE VALUE DIFFERENCES
+--------------------------
+
+Message:                         Column:       Row              Value(s):                    Diff:
+--------                         -------       ---              ---------                    -----
+
+
+
+TABLE NAME: ORBITEPHEM
+
+-----------------------
+TABLE VALUE DIFFERENCES
+-----------------------
+
+Message:                             Row:        Column:              Value(s):                    Diff:
+--------                             ----        -------              ---------                    -----
+
+Infile 1:  orbitf063806700N002_eph1.fits
+Infile 2:  t0.baryOE.testfiles/orbitf063806700N002_eph1.fits
+
+TOLERANCE FILE PARAMETERS:
+keyword                    value          range         %range                   min                   max  ignorepath
+-------                    -----          -----         ------                   ---                   ---  ----------
+(checksum)                                                                                                             
+(DATE)                                                                                                                 
+(ASCDSVER)                                                                                                             
+
+-----------------------
+HEADER VALUE DIFFERENCES
+-----------------------
+
+
+Message:                                Keyword:              Value(s):                    Diff:
+--------                                 -------              ---------                    -----
+
+
+--------------------------
+SUBSPACE VALUE DIFFERENCES
+--------------------------
+
+Message:                         Column:       Row              Value(s):                    Diff:
+--------                         -------       ---              ---------                    -----
+
+
+
+TABLE NAME: ORBITEPHEM
+
+-----------------------
+TABLE VALUE DIFFERENCES
+-----------------------
+
+Message:                             Row:        Column:              Value(s):                    Diff:
+--------                             ----        -------              ---------                    -----
+
+Infile 1:  solarf063806700N002_eph0.fits
+Infile 2:  t0.baryOE.testfiles/solarf063806700N002_eph0.fits
+
+TOLERANCE FILE PARAMETERS:
+keyword                    value          range         %range                   min                   max  ignorepath
+-------                    -----          -----         ------                   ---                   ---  ----------
+(checksum)                                                                                                             
+(DATE)                                                                                                                 
+(ASCDSVER)                                                                                                             
+
+-----------------------
+HEADER VALUE DIFFERENCES
+-----------------------
+
+
+Message:                                Keyword:              Value(s):                    Diff:
+--------                                 -------              ---------                    -----
+
+
+--------------------------
+SUBSPACE VALUE DIFFERENCES
+--------------------------
+
+Message:                         Column:       Row              Value(s):                    Diff:
+--------                         -------       ---              ---------                    -----
+
+
+
+TABLE NAME: SOLAREPHEM
+
+-----------------------
+TABLE VALUE DIFFERENCES
+-----------------------
+
+Message:                             Row:        Column:              Value(s):                    Diff:
+--------                             ----        -------              ---------                    -----
+
+Infile 1:  solarf063806700N002_eph1.fits
+Infile 2:  t0.baryOE.testfiles/solarf063806700N002_eph1.fits
+
+TOLERANCE FILE PARAMETERS:
+keyword                    value          range         %range                   min                   max  ignorepath
+-------                    -----          -----         ------                   ---                   ---  ----------
+(checksum)                                                                                                             
+(DATE)                                                                                                                 
+(ASCDSVER)                                                                                                             
+
+-----------------------
+HEADER VALUE DIFFERENCES
+-----------------------
+
+
+Message:                                Keyword:              Value(s):                    Diff:
+--------                                 -------              ---------                    -----
+
+
+--------------------------
+SUBSPACE VALUE DIFFERENCES
+--------------------------
+
+Message:                         Column:       Row              Value(s):                    Diff:
+--------                         -------       ---              ---------                    -----
+
+
+
+TABLE NAME: SOLAREPHEM
+
+-----------------------
+TABLE VALUE DIFFERENCES
+-----------------------
+
+Message:                             Row:        Column:              Value(s):                    Diff:
+--------                             ----        -------              ---------                    -----
+

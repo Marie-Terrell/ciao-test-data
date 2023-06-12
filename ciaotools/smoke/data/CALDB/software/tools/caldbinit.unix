@@ -1,0 +1,14 @@
+# This is the Caldb initilization file for UNIX systems.  It sets up the
+# 'CALDB' and 'CALDBCONFIG' environment variables.  The CALDB environment 
+# variable should point at the top level directory of the Caldb and the 
+# CALDBCONFIG environment variable should point at the file containing 
+# paths to the index files.
+# 
+# This file is site dependent.  The directory paths may need to be
+# edited when installing a Caldb.
+#
+#-----------------------------------------------------------------------
+
+setenv CALDB /data/CALDB/test_4.0
+setenv CALDBCONFIG $CALDB/software/tools/caldb.config
+setenv CALDBALIAS $CALDB/software/tools/alias_config.fits

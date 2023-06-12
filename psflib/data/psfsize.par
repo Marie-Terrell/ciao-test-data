@@ -1,0 +1,57 @@
+#
+# PSFSIZE -- calculate size of the PSF for the given position & fraction 
+#
+#
+#  when image is ready to be input
+#
+infile,s,h,"none",,,"image or source list"
+region,s,h,"",,,"image region"
+#
+# manually config/override
+#
+mission,s,a,"AXAF",AXAF|ROSAT|EINSTEIN,,"satellite name"
+axafdet,s,a,"",ACIS-I|ACIS-S|HRC-I|HRC-S|HRMA,,"AXAF detector name"
+rosatdet,s,a,"",HRI|PSPC,,"ROSAT detector name"
+einstdet,s,a,"",HRI|IPC-1,,"EINSTEIN detector name"
+#
+# grating specific stuff
+#
+grating,s,a,"NONE",HEG|LEG|MEG|NONE,,"grating name"
+order,i,a,,-1,1,"grating order"
+direction,s,a,"",dispersion|cross-dispersion,,"grating dispersion direction"
+#
+# postion
+#
+theta,r,a,,0,,"off-axis angle in arcmin"
+defocus,r,h,0,0,,"defocus in mm"
+#
+#  EE fraction to return value at (circular region)
+#
+fraction,r,a,,0,1,"encircled energy fraction desired"
+#
+# specify spectrum
+#
+spectrumfile,f,a,"",,,"spectrum file"
+spectrumnum,i,a,,,,"spectrum number for type II PHA files"
+range,s,a,"",,,"energy range or single energy in keV"
+step,r,a,,,,"interval between energies in keV"
+model,s,a,"",flat|blackbody|powerlaw|observed,,"spectral model if energy range"
+blackbodytemp,r,a,,,,"black body temperature in keV"
+powerlawslope,r,a,-1.4,,,"power law slope"
+#
+# output variables
+#
+outfile,s,a,"",,,"output file name"
+radius,r,h,,,,"output encircled energy fraction"
+#
+#
+#
+psftable,f,h,"))echo $ASCDS_CALIB/psfsize.fits",,,"calibration data file"
+#
+# system variables
+#
+kernel,s,h,"fits",fits|iraf|default,,"output file format"
+clobber,b,h,yes,,,"overwrite existing output file if it already exists"
+verbose,i,h,0,0,5,"verbose mode"
+mode,s,h,"ql",,,
+

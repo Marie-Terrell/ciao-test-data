@@ -1,0 +1,11 @@
+!checksum
+!datasum
+!date
+!creator
+!histnum
+!ascdsver
+BIN_HI=range(1e-6)
+BIN_LO=range(1e-6)
+!radecsys
+!radesys
+!equinox
