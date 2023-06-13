@@ -1,0 +1,11 @@
+SUBJECT(ahelptest)                                        CONTEXT(tools)
+
+SYNOPSIS
+
+   mkpsf -- extract a point spread function (PSF) from a PSF library 
+   file for a given energy, defocus and coordinates.
+
+SYNTAX
+
+   mkpsf infile psflibfile coord energy x y roll rotpts outfile 
+   [clobber] [verbose] [mode]

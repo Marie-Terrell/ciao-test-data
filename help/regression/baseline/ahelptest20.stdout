@@ -1,0 +1,23 @@
+SUBJECT(ahelptest)                                        CONTEXT(tools)
+
+
+EXAMPLES
+
+   EXAMPLE 1
+
+   mkpsf coord=SKY infile=test72.fits energy=1.5 x=4940 y=6040 
+   psflibfile=/my_path/psf_file2_TESTR1.fits roll=INDEF rotpts=9 
+   outfile=test1.fits
+
+   Extract a PSF model image from a given PSF library hypercube for 
+   ACIS-S with an input file with no binning in sky physical 
+   coordinates.
+
+   EXAMPLE 2
+
+   mkpsf coord=DET energy=1.5 x=5800 y=4096 
+   psflibfile=/my_path/psf_file2_TESTR1.fits roll=-116 rotpts=9 
+   outfile=test2.fits
+
+   Extract a PSF model image from a given PSF library hypercube for 
+   ACIS-S in detector physical coordinates.

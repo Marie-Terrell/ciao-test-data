@@ -1,0 +1,8 @@
+SUBJECT(ahelptest)                                        CONTEXT(tools)
+
+
+BUGS
+
+   If coord=DET and outfile=. or outfile=path/. is specified, the 
+   default output file name (from the parameter file) will be used 
+   because no input file name is provided.

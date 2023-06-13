@@ -1,0 +1,40 @@
+SUBJECT(ahelptest)                                        CONTEXT(tools)
+
+
+DESCRIPTION
+
+   For an energy, defocus and for requested x and y (sky or detector 
+   physical) coordinates, this open-iraf C program extracts a PSF 
+   model image from a given standard PSF library hypercube.
+
+   The PSF library hypercube contains PSF-model images with pixel 
+   sizes smaller or equal to the instrument pixels sizes, for a set 
+   of energies and defocus positions.
+
+   If the requested energy and/or coordinates do not match exactly 
+   the energies and coordinates in the PSF library hypercube, the 
+   program matches the given energy and position by linearly 
+   interpolating between the PSF model images in the hypercube.
+
+   Currently only the sky pixel (SKY) or the detector physical (DET) 
+   coordinate system is allowed.
+
+   If SKY is selected, the program will ask for an input file. If 
+   DET is selected, the input file will not be used.
+
+   If SKY is selected and an input image file is given, mkpsf will 
+   automatically match the binning in the image and the output will 
+   be a scaled PSF model image based on binning information provided 
+   in the input file. The output PSF model image will be rotated by 
+   the roll as specified by the keyword ROLL_NOM in the header of 
+   the input file or in the parameter file (roll). The rotation is 
+   approximate and is based on rotating a number of points per pixel 
+   specified by rotpts.
+
+   If DET is selected, the user will have to provide the values for 
+   x and y in detector physical coordinates. The program will then 
+   extract a PSF model from the hypercube corresponding to the 
+   requested energy and position on the detector, and it will rotate 
+   the image for a given roll.
+
+   The output of the program is an image.

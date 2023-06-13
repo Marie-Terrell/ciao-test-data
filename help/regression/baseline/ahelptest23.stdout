@@ -1,0 +1,18 @@
+SUBJECT(ahelptest)                                        CONTEXT(tools)
+
+
+PARAM roll
+
+   type=float
+   min=0
+   max=360
+   units=degrees
+
+   Angle in degrees to rotate the retrieved PSF model.
+
+   If no value is specified (e.g. roll=INDEF), the value of 
+   ROLL_NOM from the input file will be used; otherwise, the 
+   entered roll value will be used.
+
+   If the roll is selected to be 0, the rotpts parameter is not 
+   used.

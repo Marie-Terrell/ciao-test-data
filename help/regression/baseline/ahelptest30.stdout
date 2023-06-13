@@ -1,0 +1,502 @@
+SUBJECT(testahelp)                                    CONTEXT(testahelp)
+
+SYNOPSIS
+
+   Sample Synopsis version for testahelp in context testahelp. This 
+   is common text for synopsis.
+
+SYNTAX
+
+   Sample Syntax version for testahelp in context testahelp
+
+   More info for context testahelp
+
+DESCRIPTION
+
+   This is sample common para text. This is sample cond text for 
+   testahelp.
+   This is sample common syntax line.
+   This is sample syntax line for testahelp.
+                    This is sample common equation.
+
+                 This is sample equation for testahelp.
+   This is sample xmlonly. This is sample common href. 
+   [http://cxc.harvard.edu/ciao/sample.html]  This is sample href 
+   for testahelp. [http://cxc.harvard.edu/ciao/testahelp.html] This 
+   is sample common para text.
+
+   This is sample condtext for testahelp Allowed values for the "-b 
+   blockname" option
+   ------------------------------------------------------------------
+   |  blockname   |                   Description                   |
+   |--------------|-------------------------------------------------|
+   | SYNOPSIS     | Displays the synopsis section.                  |
+   |--------------|-------------------------------------------------|
+   | SYNTAX       | Displays the syntax section.                    |
+   |--------------|-------------------------------------------------|
+   | DESC         | Only for testahelp: Displays the main body of   |
+   |              | the help file, which is the part between the    |
+   |              | initial synopsis/syntax and the                 |
+   |              | examples/parameter list.                        |
+   |--------------|-------------------------------------------------|
+   | QEXAMPLELIST | Displays the examples.                          |
+   |--------------|-------------------------------------------------|
+   | PARAM        | Displays the parameter section. When used with  |
+   |              | the "-t name" option, only the description of   |
+   |              | the parameter matching name is listed.          |
+   |--------------|-------------------------------------------------|
+   | ADESC        | Displays any ancillary description section      |
+   |              | that is displayed after the examples/parameter  |
+   |              | list. These sections are numbered and may       |
+   |              | contain a title; if so then the "-t name"       |
+   |              | option can be used to select just that part of  |
+   |              | the description.                                |
+   |--------------|-------------------------------------------------|
+   | BUGS         | Display any bugs section.                       |
+   |--------------|-------------------------------------------------|
+   | LASTMODIFIED | Displays the date the file was last modified.   |
+   |--------------|-------------------------------------------------|
+   | VERSION      | Displays the version of the help file.          |
+   ------------------------------------------------------------------
+
+                              Common list
+
+   o) testahelp
+
+   o) xpaaccess
+
+   This is common verbatim.
+
+   This is testahelp verbatim.
+
+                             Testahelp list
+
+   o) testahelp
+
+   o) testahelp
+
+   o) testahelp
+
+   o) testahelp
+
+   o) testahelp
+
+   o) testahelp
+
+                       Sample table for testahelp
+   ------------------------------------------------------------------
+   |  blockname   |                   Description                   |
+   |--------------|-------------------------------------------------|
+   | SYNOPSIS     | Displays the synopsis section.                  |
+   |--------------|-------------------------------------------------|
+   | SYNTAX       | Displays the syntax section.                    |
+   |--------------|-------------------------------------------------|
+   | DESC         | Displays the main body of the help file, which  |
+   |              | is the part between the initial                 |
+   |              | synopsis/syntax and the examples/parameter      |
+   |              | list.                                           |
+   |--------------|-------------------------------------------------|
+   | QEXAMPLELIST | Displays the examples.                          |
+   |--------------|-------------------------------------------------|
+   | PARAM        | Displays the parameter section. When used with  |
+   |              | the "-t name" option, only the description of   |
+   |              | the parameter matching name is listed.          |
+   |--------------|-------------------------------------------------|
+   | ADESC        | Displays any ancillary description section      |
+   |              | that is displayed after the examples/parameter  |
+   |              | list. These sections are numbered and may       |
+   |              | contain a title; if so then the "-t name"       |
+   |              | option can be used to select just that part of  |
+   |              | the description.                                |
+   |--------------|-------------------------------------------------|
+   | BUGS         | Display any bugs section.                       |
+   |--------------|-------------------------------------------------|
+   | LASTMODIFIED | Displays the date the file was last modified.   |
+   |--------------|-------------------------------------------------|
+   | VERSION      | Displays the version of the help file.          |
+   ------------------------------------------------------------------
+
+   This is sample PARA text for testahelp.
+
+EXAMPLES
+
+   EXAMPLE 1
+
+   This is common example
+
+   Finds the unique source regions in srclist.fits. It outputs the 
+   source lists into files names src1.fits to srcN.fits (leading 0's 
+   are added to make all names the same string length). Background 
+   regions whose radius is twice the input radius are output in 
+   similar bkgN.fits files.
+
+   EXAMPLE 2
+
+   This is example for testahelp.
+   roi infile=srclist.fits outsrc="src#.fits" outbkg="bkg#.fits" 
+   radiusmode=mul bkgradius=2 group=group
+
+   Finds the unique source regions in srclist.fits. It outputs the 
+   source lists into files names src1.fits to srcN.fits (leading 0's 
+   are added to make all names the same string length). Background 
+   regions whose radius is twice the input radius are output in 
+   similar bkgN.fits files.
+
+PARAMETERS
+
+   -----------------------------------------------------------------
+   |    NAME    |  TYPE   | FILETYPE |  DEF  | MIN | REQD | STACKS |
+   |------------|---------|----------|-------|-----|------|--------|
+   | infile     | file    | input    |       |     | yes  |        |
+   |------------|---------|----------|-------|-----|------|--------|
+   | testahelp  | file    | output   |       |     | yes  | yes    |
+   |------------|---------|----------|-------|-----|------|--------|
+   | radiusmode | string  |          | mul   |     | yes  |        |
+   |------------|---------|----------|-------|-----|------|--------|
+   | bkgradius  | real    |          | 3     |     | yes  |        |
+   |------------|---------|----------|-------|-----|------|--------|
+   | group      | string  |          | group |     |      |        |
+   |------------|---------|----------|-------|-----|------|--------|
+   | targetbkg  | string  |          | all   |     |      |        |
+   |------------|---------|----------|-------|-----|------|--------|
+   | maxpix     | integer |          | INDEF | 1   |      |        |
+   |------------|---------|----------|-------|-----|------|--------|
+   | num_srcs   | integer |          |       |     |      |        |
+   -----------------------------------------------------------------
+
+DETAILED PARAMETER DESCRIPTIONS
+
+   1.  PARAM infile
+
+       type=file
+       filetype=input
+       reqd=yes
+
+       input source list file name
+
+       Name of input source list. Duplicate sources should be 
+       removed before hand (see merge_src).
+
+   2.  PARAM testahelp
+
+       type=file
+       filetype=output
+       reqd=yes
+       stacks=yes
+
+       output source region list
+
+       Output name (root) for source list. It should contain a "#" 
+       designator to allow the tool to auto-number the files.
+
+   3.  PARAM radiusmode
+
+       type=string
+       def=mul
+       reqd=yes
+
+       How is background radius determined
+
+       The background radius can either be a fixed annuls (add) or 
+       can be a multiple (mul) of the input radius.
+
+   4.  PARAM bkgradius
+
+       type=real
+       def=3
+       reqd=yes
+
+       background radius factor
+
+       Number added to (add) or multiplied with (mul) the input 
+       radius to determine background radius.
+
+   5.  PARAM group
+
+       type=string
+       def=group
+
+       Controls how blended sources are output.
+
+       If sources are blended (overlapping) then the tool can output 
+       three different kinds of source (and associated background) 
+       lists. In the 'group' method, all the friends-of-friends 
+       sources are output in a single region file. So if A touches B 
+       and B touches C; you get a file with regions A, B, and C. In 
+       the 'individual' method, only the sources that touch the 
+       "target" source are output. In the A touches B and B touches 
+       C example you get 3 regions output: A with B, B with A and C, 
+       and C with B. In the 'exclude' method, the "target" source is 
+       included, but the touching sources are excluded. In the A-B-C 
+       example, the output will have 3 regions, A and not-B, B and 
+       not-A and not-C, C and not-B.
+
+   6.  PARAM targetbkg
+
+       type=string
+       def=all
+
+       make background around all srcs in region or just target?
+
+       The background can either be a single shape co-located at the 
+       'target' shape (in the individual and exclude grouping 
+       methods) or can be a collection of shapes co-located at each 
+       of the srcs in the src region. For the 'group' method, the 
+       'all' background is required as there is no 'target' source.
+
+   7.  PARAM maxpix
+
+       type=integer
+       def=INDEF
+       min=1
+
+       Number of pixels allowed in overlap checking
+
+       When determing overlapping shapes, a pixel list is created at 
+       single pixel resolution. If the number pixels in that list is 
+       greater than 'maxpix' then the resolution is increased by 1 
+       and the processed repeated until the number of pixels is less 
+       than 'maxpix'. If the value is set to 'INDEF' then there is 
+       no maximum.
+
+   8.  PARAM num_srcs
+
+       type=integer
+
+       After the tool is run, it will contain the number of pairs of 
+       src and background files created.
+
+1. Common Illustrative example
+
+   Suppose you have the following regions defined
+
+
+   ellipse(100,100,12,12,0)  # A
+   ellipse(110,110,12,12,0)  # B
+   ellipse(120,120,12,12,0)  # C
+   ellipse(140,140,12,12,0)  # D
+
+
+   (The # and the identifying letter are not part of the regions). 
+   So, A overlaps B. B overlaps A and C. C overlaps B. D will fall 
+   into the background of C. There are 5 valid combinations of group 
+   and targetbkg parameters. In the examples below Al, Bl, Cl and Dl 
+   represent the background regions around A, B, C, and D 
+   respectively.
+
+   1.1 group='group' and targetbkg='all'
+
+   In this case, you will get 2 source and background files output.
+
+          ----------------------------------------------------
+          |  SOURCE   |              BACKGROUND              |
+          |-----------|--------------------------------------|
+          | A + B + C | Al*!A*!B + Bl*!A*!B*!C + Cl*!B*!C*!D |
+          |-----------|--------------------------------------|
+          | D         | Dl*!C*!D                             |
+          ----------------------------------------------------
+
+   1.2 group='group' and targetbkg='target'
+
+   This is not a valid parameter combination and will default to 
+   using targetbkg='all'.
+
+   1.3 group='exclude' and targetbkg='target'
+
+   In this case, you get 1 file for each source listed. Neighboring 
+   sources are excluded. The background only is around the target 
+   source.
+
+                       -------------------------
+                       | SOURCE  | BACKGROUND  |
+                       |---------|-------------|
+                       | A*!B    | Al*!A*!B    |
+                       |---------|-------------|
+                       | B*!A*!C | Bl*!A*!B*!C |
+                       |---------|-------------|
+                       | C*!B    | Cl*!B*!C*!D |
+                       |---------|-------------|
+                       | D       | Dl*!C*!D    |
+                       -------------------------
+
+   1.4 group='exclude' and targetbkg='all'
+
+   In this case, you get 1 file for each source listed. Neighboring 
+   sources are excluded, background is from all sources.
+
+           --------------------------------------------------
+           | SOURCE  |              BACKGROUND              |
+           |---------|--------------------------------------|
+           | A*!B    | Al*!A*!B + Bl*!A*!B                  |
+           |---------|--------------------------------------|
+           | B*!A*!C | Bl*!A*!B*!C + Al*!A*!B + Cl*!B*!C*!D |
+           |---------|--------------------------------------|
+           | C*!B    | Cl*!B*!C*!D + Bl*!A*!B*!C            |
+           |---------|--------------------------------------|
+           | D       | Dl*!C*!D                             |
+           --------------------------------------------------
+
+   1.5 group='individual' and targetbkg='target'
+
+   In this case, you get 1 file for each source listed. Neighboring 
+   sources are included.
+
+                      ---------------------------
+                      |  SOURCE   | BACKGROUND  |
+                      |-----------|-------------|
+                      | A + B     | Al*!A*!B    |
+                      |-----------|-------------|
+                      | B + A + C | Bl*!A*!B*!C |
+                      |-----------|-------------|
+                      | C + B     | Cl*!B*!C*!D |
+                      |-----------|-------------|
+                      | D         | Dl*!C*!D    |
+                      ---------------------------
+
+   1.6 group='individual' and targetbkg='all'
+
+   In this case, you get 1 file for each source listed. Neighboring 
+   sources are included, background is from all sources.
+
+          ----------------------------------------------------
+          |  SOURCE   |              BACKGROUND              |
+          |-----------|--------------------------------------|
+          | A + B     | Al*!A*!B + Bl*!A*!B                  |
+          |-----------|--------------------------------------|
+          | B + A + C | Bl*!A*!B*!C + Al*!A*!B + Cl*!B*!C*!D |
+          |-----------|--------------------------------------|
+          | C + B     | Cl*!B*!C*!D + Bl*!A*!B*!C            |
+          |-----------|--------------------------------------|
+          | D         | Dl*!C*!D                             |
+          ----------------------------------------------------
+
+2. Testahelp Illustrative example
+
+   Suppose you have the following regions defined
+
+
+   ellipse(100,100,12,12,0)  # A
+   ellipse(110,110,12,12,0)  # B
+   ellipse(120,120,12,12,0)  # C
+   ellipse(140,140,12,12,0)  # D
+
+
+   (The # and the identifying letter are not part of the regions). 
+   So, A overlaps B. B overlaps A and C. C overlaps B. D will fall 
+   into the background of C. There are 5 valid combinations of group 
+   and targetbkg parameters. In the examples below Al, Bl, Cl and Dl 
+   represent the background regions around A, B, C, and D 
+   respectively.
+
+   2.1 group='group' and targetbkg='all'
+
+   In this case, you will get 2 source and background files output.
+
+          ----------------------------------------------------
+          |  SOURCE   |              BACKGROUND              |
+          |-----------|--------------------------------------|
+          | A + B + C | Al*!A*!B + Bl*!A*!B*!C + Cl*!B*!C*!D |
+          |-----------|--------------------------------------|
+          | D         | Dl*!C*!D                             |
+          ----------------------------------------------------
+
+   2.2 group='group' and targetbkg='target'
+
+   This is not a valid parameter combination and will default to 
+   using targetbkg='all'.
+
+   2.3 group='exclude' and targetbkg='target'
+
+   In this case, you get 1 file for each source listed. Neighboring 
+   sources are excluded. The background only is around the target 
+   source.
+
+                       -------------------------
+                       | SOURCE  | BACKGROUND  |
+                       |---------|-------------|
+                       | A*!B    | Al*!A*!B    |
+                       |---------|-------------|
+                       | B*!A*!C | Bl*!A*!B*!C |
+                       |---------|-------------|
+                       | C*!B    | Cl*!B*!C*!D |
+                       |---------|-------------|
+                       | D       | Dl*!C*!D    |
+                       -------------------------
+
+   2.4 group='exclude' and targetbkg='all'
+
+   In this case, you get 1 file for each source listed. Neighboring 
+   sources are excluded, background is from all sources.
+
+           --------------------------------------------------
+           | SOURCE  |              BACKGROUND              |
+           |---------|--------------------------------------|
+           | A*!B    | Al*!A*!B + Bl*!A*!B                  |
+           |---------|--------------------------------------|
+           | B*!A*!C | Bl*!A*!B*!C + Al*!A*!B + Cl*!B*!C*!D |
+           |---------|--------------------------------------|
+           | C*!B    | Cl*!B*!C*!D + Bl*!A*!B*!C            |
+           |---------|--------------------------------------|
+           | D       | Dl*!C*!D                             |
+           --------------------------------------------------
+
+   2.5 group='individual' and targetbkg='target'
+
+   In this case, you get 1 file for each source listed. Neighboring 
+   sources are included.
+
+                      ---------------------------
+                      |  SOURCE   | BACKGROUND  |
+                      |-----------|-------------|
+                      | A + B     | Al*!A*!B    |
+                      |-----------|-------------|
+                      | B + A + C | Bl*!A*!B*!C |
+                      |-----------|-------------|
+                      | C + B     | Cl*!B*!C*!D |
+                      |-----------|-------------|
+                      | D         | Dl*!C*!D    |
+                      ---------------------------
+
+   2.6 group='individual' and targetbkg='all'
+
+   In this case, you get 1 file for each source listed. Neighboring 
+   sources are included, background is from all sources.
+
+          ----------------------------------------------------
+          |  SOURCE   |              BACKGROUND              |
+          |-----------|--------------------------------------|
+          | A + B     | Al*!A*!B + Bl*!A*!B                  |
+          |-----------|--------------------------------------|
+          | B + A + C | Bl*!A*!B*!C + Al*!A*!B + Cl*!B*!C*!D |
+          |-----------|--------------------------------------|
+          | C + B     | Cl*!B*!C*!D + Bl*!A*!B*!C            |
+          |-----------|--------------------------------------|
+          | D         | Dl*!C*!D                             |
+          ----------------------------------------------------
+
+
+BUGS
+
+   See the testahelp bugs page for this tool 
+   [http://cxc.harvard.edu/ciao/bugs/testahelp.html] on the CIAO 
+   website for an up-to-date listing of known bugs.
+
+SEE ALSO
+
+   -------------------------------------
+   |  CONTEXT  |       SUBJECTS        |
+   |-----------|-----------------------|
+   | testahelp | testahelp3            |
+   |-----------|-----------------------|
+   | testpleha | testahelp, testahelp3 |
+   |-----------|-----------------------|
+   | tools     | ahelptest, ahelptest1 |
+   -------------------------------------
+
+VERSION
+
+   TESTHELP 3.0
+
+LAST MODIFIED
+
+   June 2003

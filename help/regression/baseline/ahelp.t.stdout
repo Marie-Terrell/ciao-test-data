@@ -1,0 +1,42 @@
+TEST #1 : Testing "${UIExeDir}/ahelp -r "...passed
+TEST #2 : Testing "ahelp -r $ASCDS_INSTALL"...passed
+TEST #3 : Testing "ahelp -n 72 -f ${BaselineData}/ahelptest.xml"...passed
+TEST #4 : Testing "ahelp -n 72 -s -f ${BaselineData}/ahelptest.xml"...passed
+TEST #5 : Testing "ahelp -n 72 -m -f ${BaselineData}/ahelptest.xml"...passed
+TEST #6 : Testing "ahelp -n 72 -l -f ${BaselineData}/ahelptest.xml"...passed
+TEST #7 : Testing "ahelp -n 72 -l -f ${BaselineData}/ahelptest1.xml"...passed
+TEST #8 : Testing "ahelp -n 72 -s ahelptest"...passed
+TEST #9 : Testing "ahelp -n 72 -m ahelptest"...passed
+TEST #10 : Testing "ahelp -n 72 -l ahelptest"...passed
+TEST #11 : Testing "ahelp -n 72 -l tools ahelptest"...passed
+TEST #12 : Testing "ahelp -n 72 ahelptest"...passed
+TEST #13 : Testing "ahelp -n 72 -c tools ahelptest"...passed
+TEST #14 : Testing "ahelp -n 72 -c tools | grep ahelptest"...passed
+TEST #15 : Testing "ahelp -n 72 -k ahelptest"...passed
+TEST #16 : Testing "ahelp -n 72 -b SYNOPSIS -c tools ahelptest"...passed
+TEST #17 : Testing "ahelp -n 72 -b SYNTAX -c tools ahelptest"...passed
+TEST #18 : Testing "ahelp -n 72 -b ADDRESS -c tools ahelptest"...passed
+TEST #19 : Testing "ahelp -n 72 -b DESC -c tools ahelptest"...passed
+TEST #20 : Testing "ahelp -n 72 -b QEXAMPLELIST -c tools ahelptest"...passed
+TEST #21 : Testing "ahelp -n 72 -b PARAM -c tools ahelptest"...passed
+TEST #22 : Testing "ahelp -n 72 -b PARAM -t coord  -c tools ahelptest"...passed
+TEST #23 : Testing "ahelp -n 72 -b PARAM -t roll  -c tools ahelptest"...passed
+TEST #24 : Testing "ahelp -n 72 -b ADESC -c tools ahelptest"...passed
+TEST #25 : Testing "ahelp -n 72 -b ADESC -t SAMPLE -c tools ahelptest"...passed
+TEST #26 : Testing "ahelp -n 72 -b BUGS -c tools ahelptest"...passed
+TEST #27 : Testing "ahelp -n 72 -b VERSION -c tools ahelptest"...passed
+TEST #28 : Testing "ahelp -n 72 -b LASTMODIFIED -c tools ahelptest"...passed
+TEST #29 : Testing  ahelp -n 72 '/.*test$/'...passed
+TEST #30 : Testing  ahelp -n 72 '/.*test1$/'...passed
+TEST #31 : Testing  ahelp -n 72 ahelptestcontrib...passed
+TEST #32 : Testing  ahelp -n 72 testahelp...passed
+TEST #33 : Testing  ahelp -n 72 testahelp testahelp...passed
+TEST #34 : Testing  ahelp -n 72 testpleha testahelp...passed
+TEST #35 : Testing  ahelp intermediate html files...passed
+TEST #36 : Testing  ahelp intermediate html files...passed
+TEST #37 : Testing  ahelp intermediate html files...passed
+TEST #38 : Testing  ahelp intermediate html files...passed
+TEST #39 : Testing  "ahelp -n 72 testpleha testahelp3" with empty displayseealso group attribute...passed
+TEST #40 : Testing  "ahelp -n 72 testahelp testahelp3" with empty displayseealso group attribute...passed
+TEST #41 : Testing  "ahelp -n 72 testahelp4 testahelp4" for unmbering in ADESC block...passed
+Cleaning up, patience...

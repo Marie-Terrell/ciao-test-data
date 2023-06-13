@@ -1,0 +1,155 @@
+SUBJECT(ahelptest)                                        CONTEXT(tools)
+
+
+PARAMETERS
+
+    ----------------------------------------------------------------
+    |    NAME    |  TYPE   | FILETYPE | MIN | MAX |  UNITS  | REQD |
+    |------------|---------|----------|-----|-----|---------|------|
+    | coord      | string  |          |     |     |         |      |
+    |------------|---------|----------|-----|-----|---------|------|
+    | infile     | string  | input    |     |     |         | no   |
+    |------------|---------|----------|-----|-----|---------|------|
+    | psflibfile | string  | input    |     |     |         | yes  |
+    |------------|---------|----------|-----|-----|---------|------|
+    | energy     | float   |          | 0   |     | keV     |      |
+    |------------|---------|----------|-----|-----|---------|------|
+    | x          | float   |          |     |     |         |      |
+    |------------|---------|----------|-----|-----|---------|------|
+    | y          | float   |          |     |     |         |      |
+    |------------|---------|----------|-----|-----|---------|------|
+    | roll       | float   |          | 0   | 360 | degrees |      |
+    |------------|---------|----------|-----|-----|---------|------|
+    | rotpts     | integer |          | 1   |     |         |      |
+    |------------|---------|----------|-----|-----|---------|------|
+    | outfile    | string  | output   |     |     |         | yes  |
+    |------------|---------|----------|-----|-----|---------|------|
+    | clobber    | boolean |          |     |     |         |      |
+    |------------|---------|----------|-----|-----|---------|------|
+    | verbose    | integer |          | 0   | 5   |         |      |
+    ----------------------------------------------------------------
+
+DETAILED PARAMETER DESCRIPTIONS
+
+   1.  PARAM coord
+
+       type=string
+
+       The coordinate system for x and y.
+
+       The coordinate system for x and y. Currently only the sky 
+       pixel or the detector physical coordinate system are allowed. 
+       If SKY is selected the x and y are the sky physical 
+       coordinates of the location on the detector where the user 
+       wants the PSF model. If DET is selected, x and y are the 
+       detector physical coordinates of the location on the detector 
+       where the user wants the PSF model. (SKY|DET)
+
+   2.  PARAM infile
+
+       type=string
+       filetype=input
+       reqd=no
+
+       Input file name of a FITS image.
+
+       FITS image header info will be used to obtain binning 
+       information and the roll (ROLL_NOM).
+
+   3.  PARAM psflibfile
+
+       type=string
+       filetype=input
+       reqd=yes
+
+       PSF library hypercube file name.
+
+       This file should be an ACIS-I, ACIS-S, HRC-I or HRC-S 
+       standard PSF library hypercube FITS file containing a set of 
+       PSF models for a given instrument, a set of energies and a 
+       set of defocus positions on a grid of off-axis angles 
+       covering the detector. The standard PSF library hypercube 
+       must be selected by the user and its name must be entered.
+
+   4.  PARAM energy
+
+       type=float
+       min=0
+       units=keV
+
+       Energy in keV of required PSF model image.
+
+   5.  PARAM x
+
+       type=float
+
+       x coordinate.
+
+       If SKY coordinates are selected, then x is the sky physical x 
+       coordinate of a selected location in the input image (e.g. 
+       using ds9 display). If the selected coordinate system is DET, 
+       then x should be specified in detector physical coordinates.
+
+   6.  PARAM y
+
+       type=float
+
+       y coordinate.
+
+       If SKY coordinates are selected, then y is the sky physical y 
+       coordinate of a selected location in the input image (e.g. 
+       using ds9 display). If the selected coordinate system is DET, 
+       then y should be specified in detector physical coordinates.
+
+   7.  PARAM roll
+
+       type=float
+       min=0
+       max=360
+       units=degrees
+
+       Angle in degrees to rotate the retrieved PSF model.
+
+       If no value is specified (e.g. roll=INDEF), the value of 
+       ROLL_NOM from the input file will be used; otherwise, the 
+       entered roll value will be used.
+
+       If the roll is selected to be 0, the rotpts parameter is not 
+       used.
+
+   8.  PARAM rotpts
+
+       type=integer
+       min=1
+
+       Number of points per pixel used in rotation calculations.
+
+       The rotation is approximate - the more points are used, the 
+       more accurate results. However, a larger number results in 
+       increased computation time; therefore, a number larger than 
+       20 is not recommended.
+
+   9.  PARAM outfile
+
+       type=string
+       filetype=output
+       reqd=yes
+
+       Output FITS image file name.
+
+       If "." or "path/." is specified, the output file name will be 
+       created based on the input file name.
+
+   10. PARAM clobber
+
+       type=boolean
+
+       Overwrite output file if it exists?
+
+   11. PARAM verbose
+
+       type=integer
+       min=0
+       max=5
+
+       Display level. 0 = no display.

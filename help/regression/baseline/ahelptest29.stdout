@@ -1,0 +1,16 @@
+------------------------------------------------------------------------
+|  SUBJECT  |  CONTEXT  |                   SYNOPSIS                   |
+|-----------|-----------|----------------------------------------------|
+| testahelp | testahelp | Sample Synopsis version for testahelp in     |
+|           |           | context testahelp. This is common text for   |
+|           |           | synopsis.                                    |
+|-----------|-----------|----------------------------------------------|
+| testahelp | testpleha | Sample Synopsis version for testahelp in     |
+|           |           | context testpleha. This is common text for   |
+|           |           | synopsis.                                    |
+------------------------------------------------------------------------
+
+Use "ahelp subject" ("ahelp context subject" for non-unique cases) 
+e.g.: 
+ ahelp testahelp
+ ahelp testpleha testahelp

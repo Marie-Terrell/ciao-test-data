@@ -1,0 +1,141 @@
+	<!ELEMENT cxchelptopics (ENTRY)>
+	<!ELEMENT ENTRY (SYNOPSIS?, SYNTAX?, ADDRESS*, DESC?, 
+			 QEXAMPLELIST?, PARAMLIST?, ADESC*,BUGS?, 
+			 VERSION?, LASTMODIFIED? )>
+	<!ELEMENT ADDRESS      (URL, LABEL?)>
+	<!ELEMENT ADESC        (PARA|TABLE|LIST|VERBATIM)*>
+	<!ELEMENT BUGS         ( #PCDATA | CONDTEXT | PARA | TABLE | LIST | VERBATIM)*>
+	<!ELEMENT CAPTION      (#PCDATA | CONDTEXT)*>
+        <!ELEMENT DATA         (#PCDATA | CONDTEXT)*>
+	<!ELEMENT DESC	       (PARA | TABLE | LIST | VERBATIM)*>
+        <!ELEMENT EQUATION     (#PCDATA| CONDTEXT | PASSTHRU|XMLONLY)*>
+	<!ELEMENT QEXAMPLELIST (QEXAMPLE)*>
+	<!ELEMENT HREF         (#PCDATA| CONDTEXT)*>
+        <!ELEMENT ITEM         (#PCDATA| CONDTEXT)*>
+        <!ELEMENT LABEL        (#PCDATA| CONDTEXT)*>
+	<!ELEMENT LASTMODIFIED (#PCDATA| CONDTEXT)*>
+	<!ELEMENT LINE         (#PCDATA| CONDTEXT | HREF)* >
+        <!ELEMENT LIST         ( CAPTION?, ITEM* )>
+	<!ELEMENT PARA         (#PCDATA| CONDTEXT | SYNTAX | EQUATION | PASSTHRU
+	| XMLONLY | HREF)*>
+	<!ELEMENT PARAM        ( SYNOPSIS?, DESC? )>
+	<!ELEMENT PARAMLIST    (PARAM*)>
+	<!ELEMENT PASSTHRU     (#PCDATA)* >
+	<!ELEMENT ROW          (DATA*)>
+	<!ELEMENT QEXAMPLE     (SYNTAX?, DESC?)>
+	<!ELEMENT SYNOPSIS     (#PCDATA| CONDTEXT)*>
+	<!ELEMENT SYNTAX       (LINE*)>
+	<!ELEMENT TABLE        ( CAPTION?, ROW*)>
+	<!ELEMENT URL          (#PCDATA| CONDTEXT)*>
+	<!ELEMENT VERBATIM     (#PCDATA| CONDTEXT)*>
+        <!ELEMENT VERSION      (#PCDATA| CONDTEXT)*>
+	<!ELEMENT XMLONLY      (#PCDATA| CONDTEXT)*>
+        <!ELEMENT CONDTEXT     (#PCDATA)>
+
+	<!ATTLIST ENTRY
+		key		NMTOKEN		#REQUIRED
+		refkeywords	CDATA   	#IMPLIED
+		context		CDATA   	#REQUIRED
+		seealsogroups   CDATA           #IMPLIED
+                displayseealsogroups CDATA     #IMPLIED
+	>
+	<!ENTITY % ParamCommonality 
+		"type  (string | integer | boolean | real | float | double |
+                       file | notype ) #REQUIRED
+		filetype    (input | output| ARD) #IMPLIED
+		def		CDATA           #IMPLIED
+		min		CDATA           #IMPLIED
+		max		CDATA           #IMPLIED
+		units		CDATA           #IMPLIED
+		reqd	   (yes | no)	        #IMPLIED
+		stacks     (yes | no)           #IMPLIED
+		autoname  (yes | no)            #IMPLIED"
+	>
+        <!ATTLIST ADDRESS
+                context         CDATA        #IMPLIED
+	>
+	<!ATTLIST ADESC
+                context         CDATA        #IMPLIED
+	        title           CDATA        #IMPLIED
+                paragraph_numbering         (yes|no)     #IMPLIED
+	>
+        <!ATTLIST BUGS
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST CAPTION
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST DATA
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST DESC
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST EQUATION
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST QEXAMPLELIST
+                context         CDATA        #IMPLIED
+	>
+	<!ATTLIST HREF
+                context         CDATA        #IMPLIED
+	        link            CDATA        #IMPLIED
+	>	
+        <!ATTLIST ITEM
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST LABEL
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST LASTMODIFIED
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST LINE
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST LIST
+                context         CDATA        #IMPLIED
+	>
+	<!ATTLIST PARA
+                context         CDATA        #IMPLIED
+	        title           CDATA        #IMPLIED
+	>
+	<!ATTLIST PARAM
+                context         CDATA           #IMPLIED
+		name		CDATA		#REQUIRED
+		%ParamCommonality;
+	>
+        <!ATTLIST PARAMLIST
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST ROW
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST QEXAMPLE
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST SYNOPSIS
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST SYNTAX
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST TABLE
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST URL
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST VERBATIM
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST VERSION
+                context         CDATA        #IMPLIED
+	>
+        <!ATTLIST XMLONLY
+                context         CDATA        #IMPLIED
+	>
+
+	<!ATTLIST CONDTEXT
+	        context           NMTOKEN        #REQUIRED
+	>

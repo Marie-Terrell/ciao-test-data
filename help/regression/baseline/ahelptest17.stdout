@@ -1,0 +1,7 @@
+SUBJECT(ahelptest)                                        CONTEXT(tools)
+
+
+SYNTAX
+
+   mkpsf infile psflibfile coord energy x y roll rotpts outfile 
+   [clobber] [verbose] [mode]

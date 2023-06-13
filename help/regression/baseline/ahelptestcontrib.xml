@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cxchelptopics SYSTEM "CXCHelp.dtd">
+<cxchelptopics>
+<ENTRY key="ahelptestcontrib"  context="tools"  refkeywords="test"  seealsogroups="ahelpcontrib"  >
+<SYNOPSIS>
+
+mkpsf -- extract a point spread function (PSF) from a PSF library file
+for a given energy, defocus and coordinates.
+
+</SYNOPSIS>
+<SYNTAX>
+<LINE>
+
+mkpsf infile psflibfile coord energy x y roll rotpts outfile [clobber] [verbose] [mode]
+
+</LINE>
+
+</SYNTAX>
+<ADDRESS>
+<URL>
+tools/rmf.html#sec:mkpsf
+</URL>
+<LABEL>
+sec:mkpsf
+</LABEL>
+
+</ADDRESS>
+<DESC>
+<PARA>
+</PARA>
+<PARA>
+
+For an energy, defocus and for requested x and y
+(sky or detector physical) coordinates, this open-iraf C program
+extracts a PSF model image from a given standard PSF library hypercube.
+
+</PARA>
+<PARA>
+
+The PSF library hypercube contains PSF-model images with pixel
+sizes smaller or equal to the instrument pixels sizes, for 
+a set of energies and defocus positions. 
+
+</PARA>
+<PARA>
+
+If the requested energy and/or coordinates do not match exactly the
+energies and coordinates in the PSF library hypercube, the program
+matches the given energy and position by linearly interpolating
+between the PSF model images in the hypercube.
+
+</PARA>
+<PARA>
+
+Currently only the sky pixel (SKY) or the detector physical (DET)
+coordinate system is allowed. 
+
+</PARA>
+<PARA>
+
+If SKY is selected, the program will ask for an input file. If DET 
+is selected, the input file will not be used.
+
+</PARA>
+<PARA>
+
+If SKY is selected and an input image file is given, mkpsf will 
+automatically match the binning in the image and the output will 
+be a scaled PSF model image based on
+binning information provided in the input file.
+The output PSF model image will be rotated by the roll as
+specified by the keyword ROLL_NOM in the header of the input file
+or in the parameter file (roll).
+The rotation is approximate and is based on rotating a number
+of points per pixel specified by rotpts.
+
+</PARA>
+<PARA>
+
+If DET is selected, the user will have to provide
+the values for x and y in detector physical coordinates.
+The program will then extract a PSF model from the hypercube
+corresponding to the requested energy and position on the detector,
+and it will rotate the image for a given roll.
+
+</PARA>
+<PARA>
+
+The output of the program is an image.
+
+</PARA>
+
+</DESC>
+<QEXAMPLELIST>
+<QEXAMPLE>
+<SYNTAX>
+<LINE>
+
+</LINE>
+
+</SYNTAX>
+<DESC>
+<PARA>
+</PARA>
+
+</DESC>
+
+</QEXAMPLE>
+
+<QEXAMPLE>
+<SYNTAX>
+<LINE>
+
+mkpsf coord=SKY infile=test72.fits energy=1.5 x=4940 y=6040 psflibfile=/my_path/psf_file2_TESTR1.fits roll=INDEF rotpts=9 outfile=test1.fits
+
+</LINE>
+
+</SYNTAX>
+<DESC>
+<PARA>
+
+Extract a PSF model image from a given PSF library hypercube
+for ACIS-S with an input file with no binning in sky
+physical coordinates.
+
+</PARA>
+
+</DESC>
+
+</QEXAMPLE>
+<QEXAMPLE>
+<SYNTAX>
+<LINE>
+
+mkpsf coord=DET energy=1.5 x=5800 y=4096 psflibfile=/my_path/psf_file2_TESTR1.fits roll=-116 rotpts=9 outfile=test2.fits
+
+</LINE>
+
+</SYNTAX>
+<DESC>
+<PARA>
+
+Extract a PSF model image from a given PSF library hypercube
+for ACIS-S in detector physical coordinates.
+
+</PARA>
+
+</DESC>
+
+</QEXAMPLE>
+</QEXAMPLELIST>
+<PARAMLIST>
+<PARAM name="coord"  type="string"  >
+<SYNOPSIS>
+
+The coordinate system for x and y.
+
+</SYNOPSIS>
+<DESC>
+<PARA>
+
+The coordinate system for x and y.
+Currently only the sky pixel or the detector physical
+coordinate system are allowed. If SKY is selected the 
+x and y are the sky physical coordinates of the location on
+the detector where the user wants the PSF model.
+If DET is selected, x and y are the detector physical
+coordinates of the location on the detector where the user 
+wants the PSF model. (SKY|DET)
+
+</PARA>
+
+</DESC>
+
+</PARAM>
+<PARAM name="infile"  type="string"  filetype="input"  reqd="no"  >
+<SYNOPSIS>
+
+Input file name of a FITS image.
+
+</SYNOPSIS>
+<DESC>
+<PARA>
+
+FITS image header info will be used to obtain binning information
+and the roll (ROLL_NOM).
+
+</PARA>
+
+</DESC>
+
+</PARAM>
+<PARAM name="psflibfile"  type="string"  filetype="input"  reqd="yes"  >
+<SYNOPSIS>
+
+PSF library hypercube file name.
+
+</SYNOPSIS>
+<DESC>
+<PARA>
+
+This file should be an ACIS-I, ACIS-S, HRC-I or HRC-S
+standard PSF library hypercube FITS file containing a set
+of PSF models for a given instrument, a set of energies and
+a set of defocus positions on a grid of off-axis angles 
+covering the detector. The standard PSF library hypercube
+must be selected by the user and its name must be entered.
+
+</PARA>
+
+</DESC>
+
+</PARAM>
+<PARAM name="energy"  type="float"  min="0"  units="keV"  >
+<SYNOPSIS>
+
+Energy in keV of required PSF model image.
+
+</SYNOPSIS>
+
+</PARAM>
+<PARAM name="x"  type="float"  >
+<SYNOPSIS>
+
+x coordinate.
+
+</SYNOPSIS>
+<DESC>
+<PARA>
+
+If SKY coordinates are selected, then x is the sky physical
+x coordinate of a selected location in the input image 
+(e.g. using ds9 display). If the selected coordinate system
+is DET, then x should be specified in detector physical
+coordinates.
+
+</PARA>
+
+</DESC>
+
+</PARAM>
+<PARAM name="y"  type="float"  >
+<SYNOPSIS>
+
+y coordinate.
+
+</SYNOPSIS>
+<DESC>
+<PARA>
+
+If SKY coordinates are selected, then y is the sky physical
+y coordinate of a selected location in the input image
+(e.g. using ds9 display). If the selected coordinate system
+is DET, then y should be specified in detector physical
+coordinates.
+
+</PARA>
+
+</DESC>
+
+</PARAM>
+<PARAM name="roll"  type="float"  min="0"  max="360"  units="degrees"  >
+<SYNOPSIS>
+
+Angle in degrees to rotate the retrieved PSF model.
+
+</SYNOPSIS>
+<DESC>
+<PARA>
+
+If no value is specified (e.g. roll=INDEF), the value of
+ROLL_NOM from the input file will be used; otherwise,
+the entered roll value will be used.
+
+</PARA>
+<PARA>
+
+If the roll is selected to be 0, the rotpts parameter is
+not used.
+
+</PARA>
+
+</DESC>
+
+</PARAM>
+<PARAM name="rotpts"  type="integer"  min="1"  >
+<SYNOPSIS>
+
+Number of points per pixel used in rotation calculations.
+
+</SYNOPSIS>
+<DESC>
+<PARA>
+
+The rotation is approximate - the more points are used, the more
+accurate results. However, a larger number results in increased
+computation time; therefore, a number larger than 20 is not
+recommended.
+
+</PARA>
+
+</DESC>
+
+</PARAM>
+<PARAM name="outfile"  type="string"  filetype="output"  reqd="yes"  >
+<SYNOPSIS>
+
+Output FITS image file name.  
+
+</SYNOPSIS>
+<DESC>
+<PARA>
+
+If &quot;.&quot; or &quot;path/.&quot; is specified, the output file name will be
+created based on the input file name.
+
+</PARA>
+
+</DESC>
+
+</PARAM>
+<PARAM name="clobber"  type="boolean"  >
+<SYNOPSIS>
+
+Overwrite output file if it exists?
+
+</SYNOPSIS>
+
+</PARAM>
+<PARAM name="verbose"  type="integer"  min="0"  max="5"  >
+<SYNOPSIS>
+
+Display level.  0 = no display.
+
+</SYNOPSIS>
+
+</PARAM>
+</PARAMLIST>
+<ADESC>
+</ADESC>
+<ADESC title="SAMPLE"  >
+<VERBATIM>
+
+This is a test for adesc block
+</VERBATIM>
+
+</ADESC>
+<ADESC title="NEW SAMPLE"  >
+<VERBATIM>
+
+This is a test for adesc block
+</VERBATIM>
+
+</ADESC>
+<BUGS>
+
+    If coord=DET and outfile=. or outfile=path/. is specified, the 
+    default output file name (from the parameter file) will be used
+    because no input file name is provided.
+
+</BUGS>
+<VERSION>
+
+Data Analysis Release, November 1999
+
+</VERSION>
+<LASTMODIFIED>
+
+5 November 1999
+
+</LASTMODIFIED>
+
+</ENTRY>
+
+</cxchelptopics>
+

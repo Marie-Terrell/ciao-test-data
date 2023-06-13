@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cxchelptopics SYSTEM "CXCHelp.dtd">
+<cxchelptopics>
+  <ENTRY key="testahelp3" context="testahelp|testpleha"
+    refkeywords="help ahelp|help pleha" seealsogroups="test ahelp |
+    test" displayseealsogroups="test ahelp|">
+    <SYNOPSIS> Sample Synopsis version for <CONDTEXT context="testahelp"> testahelp in context testahelp</CONDTEXT><CONDTEXT context="testpleha"> testahelp in context testpleha</CONDTEXT>.  This is common text for synopsis.</SYNOPSIS>
+    <SYNTAX><LINE>Sample Syntax version for<CONDTEXT context="testahelp">  testahelp in context testahelp</CONDTEXT><CONDTEXT context="testpleha">  testahelp in context testpleha</CONDTEXT></LINE><LINE>        </LINE><LINE>More info for context <CONDTEXT context="testahelp">testahelp</CONDTEXT><CONDTEXT context="testpleha">testpleha</CONDTEXT></LINE></SYNTAX>
+
+    <ADDRESS>
+      <URL context="testahelp">testahelp.html</URL>
+      <LABEL context="testahelp">TESTAHELP LABEL</LABEL>
+    </ADDRESS>
+
+    <ADDRESS context="testahelp">
+      <URL>testahelp.html</URL>
+      <LABEL>NEW TESTAHELP LABEL</LABEL>
+    </ADDRESS>
+    
+    
+    <ADDRESS>
+      <URL context="testpleha">testahelp.html</URL>
+      <LABEL context="testpleha">TESTPLEHA LABEL</LABEL>
+    </ADDRESS>
+    <ADDRESS context="testpleha">
+      <URL>testahelp.html</URL>
+      <LABEL>NEW TESTPLEHA LABEL</LABEL>
+    </ADDRESS>
+  
+    <ADDRESS>
+      <URL> <CONDTEXT context="testahelp">testahelp.html</CONDTEXT>
+        <CONDTEXT context="testpleha">testahelp.html</CONDTEXT> 
+      </URL>
+      <LABEL> <CONDTEXT  context="testahelp">NEWER TESTAHELP LABEL</CONDTEXT>
+              <CONDTEXT  context="testpleha">NEWER TESTPLEHA LABEL</CONDTEXT>
+      </LABEL>
+    </ADDRESS>
+      
+    
+    <ADDRESS>
+      <URL context="testahelp">http://cxc.harvard.edu/ciao/ahelp/ahelp.html</URL>
+      <LABEL context="testahelp">TESTAHELP LABEL</LABEL>
+    </ADDRESS>
+
+    <ADDRESS context="testahelp">
+      <URL>http://cxc.harvard.edu/ciao/ahelp/ahelp.html</URL>
+      <LABEL>NEW TESTAHELP LABEL</LABEL>
+    </ADDRESS>
+
+    <ADDRESS><URL context="testpleha">http://cxc.harvard.edu/ciao/ahelp/ahelp.html</URL><LABEL context="testpleha">TESTPLEHA LABEL</LABEL></ADDRESS>
+    <ADDRESS context="testpleha"><URL>http://cxc.harvard.edu/ciao/ahelp/ahelp.html</URL><LABEL>NEW TESTPLEHA LABEL</LABEL></ADDRESS>
+    
+    <ADDRESS>
+      <URL> <CONDTEXT context="testahelp">http://cxc.harvard.edu/ciao/ahelp/ahelp.html</CONDTEXT>
+            <CONDTEXT context="testpleha">http://cxc.harvard.edu/ciao/ahelp/ahelp.html</CONDTEXT> 
+     </URL>
+     <LABEL><CONDTEXT context="testahelp">NEWER TESTAHELP LABEL</CONDTEXT>
+            <CONDTEXT context="testpleha">NEWER TESTPLEHA LABEL</CONDTEXT>
+     </LABEL>
+    </ADDRESS>
+
+
+    <DESC>
+      <PARA>
+         This is sample common para text.
+         <CONDTEXT context="testahelp"> This is sample cond text for testahelp.</CONDTEXT>
+         <CONDTEXT context="testpleha"> This is sample cond text for testpleha.</CONDTEXT>
+          <SYNTAX >
+	  <LINE>This is sample common syntax line.</LINE>
+         </SYNTAX>
+         <SYNTAX context="testahelp" >
+	  <LINE>This is sample syntax line for testahelp.</LINE>
+         </SYNTAX>
+         <EQUATION>
+          <PASSTHRU>This is sample passthru.</PASSTHRU>
+          <XMLONLY>This is sample xmlonly.</XMLONLY>
+          This is sample common equation.
+         </EQUATION>
+         <EQUATION context="testahelp">
+         This is sample equation for testahelp.
+         </EQUATION>
+         <PASSTHRU>
+           This is sample passthru.
+         </PASSTHRU>
+         <XMLONLY>
+           This is sample xmlonly.
+         </XMLONLY>
+         <HREF link="http://cxc.harvard.edu/ciao/sample.html" >
+           This is sample common href.
+         </HREF>
+         <HREF context="testahelp" link="http://cxc.harvard.edu/ciao/testahelp.html">
+           This is sample href for testahelp.
+         </HREF>
+         <SYNTAX context="testpleha" >
+	  <LINE> This is sample syntax line for testpleha</LINE>
+         </SYNTAX>
+         <EQUATION context="testpleha" >
+           This is sample equation for testpleha.
+         </EQUATION>
+         This is sample common para text.
+         <HREF context="testpleha" link="http://cxc.harvard.edu/ciao/testpleha.html">
+           This is sample href for testpleha.
+         </HREF>
+      </PARA>
+      <TABLE>      
+	<CAPTION><CONDTEXT context="testahelp">This is sample condtext
+	 for testahelp </CONDTEXT>Allowed values for the "-b blockname" option</CAPTION>
+	<ROW><DATA><CONDTEXT context="testpleha">This is sample
+	condtext testpleha </CONDTEXT>blockname</DATA><DATA>Description</DATA></ROW>
+	<ROW>
+	  <DATA>SYNOPSIS</DATA>
+	  <DATA>Displays the synopsis section.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>SYNTAX</DATA>
+	  <DATA>Displays the syntax section.</DATA>
+	</ROW>
+	<ROW context = "testahelp">
+	  <DATA>DESC</DATA>
+	  <DATA>Only for testahelp: Displays the main body of the help file, which is the
+	  part between the initial synopsis/syntax and the
+	  examples/parameter list.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>QEXAMPLELIST</DATA>
+	  <DATA>Displays the examples.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>PARAM</DATA>
+	  <DATA>Displays the parameter section. When used with the "-t name"
+	  option, only the description of the parameter matching name is listed.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>ADESC</DATA>
+	  <DATA>Displays any ancillary description section that is
+	    displayed after the examples/parameter list.
+	    These sections are numbered and may contain a title; if so then
+	    the "-t name" option can be used to select just that part of
+	    the description.
+	  </DATA>
+	</ROW>
+	<ROW>
+	  <DATA>BUGS</DATA>
+	  <DATA>Display any bugs section.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>LASTMODIFIED</DATA>
+	  <DATA>Displays the date the file was last modified.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>VERSION</DATA>
+	  <DATA>Displays the version of the help file.</DATA>
+	</ROW>
+      </TABLE>
+
+
+      <LIST>
+        <CAPTION>Common list</CAPTION>
+	<ITEM context="testahelp">testahelp</ITEM> 
+	<ITEM context="testpleha">testpleha</ITEM> 
+	<ITEM>xpaaccess</ITEM>
+      </LIST>
+
+
+      <VERBATIM>This is common verbatim.</VERBATIM>
+ 
+      <VERBATIM context="testahelp">This is testahelp verbatim.</VERBATIM>
+      <LIST context="testahelp">
+        <CAPTION>Testahelp list</CAPTION>
+	<ITEM>testahelp</ITEM>
+	<ITEM>testahelp</ITEM>
+	<ITEM>testahelp</ITEM>
+        <ITEM>testahelp</ITEM>
+	<ITEM>testahelp</ITEM>
+	<ITEM>testahelp</ITEM>
+      </LIST>
+
+      <TABLE context="testahelp">
+          <CAPTION>Sample table for testahelp</CAPTION>
+	<ROW><DATA>blockname</DATA><DATA>Description</DATA></ROW>
+	<ROW>
+	  <DATA>SYNOPSIS</DATA>
+	  <DATA>Displays the synopsis section.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>SYNTAX</DATA>
+	  <DATA>Displays the syntax section.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>DESC</DATA>
+	  <DATA>Displays the main body of the help file, which is the
+	  part between the initial synopsis/syntax and the
+	  examples/parameter list.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>QEXAMPLELIST</DATA>
+	  <DATA>Displays the examples.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>PARAM</DATA>
+	  <DATA>Displays the parameter section. When used with the "-t name"
+	  option, only the description of the parameter matching name is listed.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>ADESC</DATA>
+	  <DATA>Displays any ancillary description section that is
+	    displayed after the examples/parameter list.
+	    These sections are numbered and may contain a title; if so then
+	    the "-t name" option can be used to select just that part of
+	    the description.
+	  </DATA>
+	</ROW>
+	<ROW>
+	  <DATA>BUGS</DATA>
+	  <DATA>Display any bugs section.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>LASTMODIFIED</DATA>
+	  <DATA>Displays the date the file was last modified.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>VERSION</DATA>
+	  <DATA>Displays the version of the help file.</DATA>
+	</ROW>
+      </TABLE>
+      <PARA context="testahelp">
+       This is sample PARA text for testahelp.
+      </PARA>
+
+      <VERBATIM context="testpleha">This is testpleha verbatim.</VERBATIM>
+      <LIST context="testpleha">
+        <CAPTION>Testpleha list</CAPTION>
+	<ITEM>testpleha</ITEM>
+	<ITEM>testpleha</ITEM>
+	<ITEM>testpleha</ITEM>
+        <ITEM>testpleha</ITEM>
+	<ITEM>testpleha</ITEM>
+	<ITEM>testpleha</ITEM>
+      </LIST>
+      <TABLE context="testpleha">
+          <CAPTION>Sample table for testpleha</CAPTION>
+	<ROW><DATA>blockname</DATA><DATA>Description</DATA></ROW>
+	<ROW>
+	  <DATA>SYNOPSIS</DATA>
+	  <DATA>Displays the synopsis section.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>SYNTAX</DATA>
+	  <DATA>Displays the syntax section.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>DESC</DATA>
+	  <DATA>Displays the main body of the help file, which is the
+	  part between the initial synopsis/syntax and the
+	  examples/parameter list.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>QEXAMPLELIST</DATA>
+	  <DATA>Displays the examples.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>PARAM</DATA>
+	  <DATA>Displays the parameter section. When used with the "-t name"
+	  option, only the description of the parameter matching name is listed.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>ADESC</DATA>
+	  <DATA>Displays any ancillary description section that is
+	    displayed after the examples/parameter list.
+	    These sections are numbered and may contain a title; if so then
+	    the "-t name" option can be used to select just that part of
+	    the description.
+	  </DATA>
+	</ROW>
+	<ROW>
+	  <DATA>BUGS</DATA>
+	  <DATA>Display any bugs section.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>LASTMODIFIED</DATA>
+	  <DATA>Displays the date the file was last modified.</DATA>
+	</ROW>
+	<ROW>
+	  <DATA>VERSION</DATA>
+	  <DATA>Displays the version of the help file.</DATA>
+	</ROW>
+      </TABLE>
+      <PARA context="testpleha">
+       This is sample PARA text for testpleha.
+      </PARA>
+   </DESC> 
+
+   <QEXAMPLELIST>
+       <QEXAMPLE>
+         <SYNTAX>
+            <LINE>This is common example 
+            </LINE>
+         </SYNTAX>
+         <DESC>
+            <PARA>
+	Finds the unique source regions in srclist.fits.  It outputs
+the source lists into files names src1.fits to srcN.fits (leading 0's
+are added to make all names the same string length).  Background
+regions whose radius is twice the input radius are output in similar
+bkgN.fits files.
+            </PARA>
+         </DESC>
+      </QEXAMPLE>
+
+      <QEXAMPLE context="testahelp">
+         <SYNTAX>
+            <LINE>This is example for testahelp.</LINE>
+        <LINE> 
+	roi infile=srclist.fits outsrc="src#.fits" outbkg="bkg#.fits"
+	radiusmode=mul bkgradius=2 group=group
+            </LINE>
+         </SYNTAX>
+         <DESC>
+            <PARA>
+	Finds the unique source regions in srclist.fits.  It outputs
+the source lists into files names src1.fits to srcN.fits (leading 0's
+are added to make all names the same string length).  Background
+regions whose radius is twice the input radius are output in similar
+bkgN.fits files.
+            </PARA>
+         </DESC>
+      </QEXAMPLE>
+      <QEXAMPLE context="testpleha">
+         <SYNTAX>
+            <LINE>This is example for testpleha.</LINE>
+          <LINE>
+	roi infile=srclist.fits outsrc="src#.fits" outbkg="bkg#.fits"
+	radiusmode=mul bkgradius=2 group=individual
+            </LINE>
+         </SYNTAX>
+         <DESC>
+            <PARA>
+   Similar to above example; however, there will be 1 file for each
+source listed in srclist.fits; blended source will appear in multiple
+files.
+            </PARA>
+         </DESC>
+      </QEXAMPLE>   
+    </QEXAMPLELIST>
+
+
+   <PARAMLIST>
+      <PARAM name="infile" type="file" filetype="input" reqd="yes">
+         <SYNOPSIS>
+	input source list file name
+         </SYNOPSIS>
+         <DESC>
+            <PARA>
+	Name of input source list.  Duplicate sources should be
+removed before hand (see merge_src).
+            </PARA>
+         </DESC>
+      </PARAM>
+      <PARAM context="testahelp" name="testahelp" type="file" filetype="output"
+reqd="yes" stacks="yes">
+         <SYNOPSIS>
+	  output source region list
+         </SYNOPSIS>
+         <DESC>
+            <PARA>
+	Output name (root) for source list.  It should contain a "#"
+	designator to allow the tool to auto-number the files.
+            </PARA>
+         </DESC>
+      </PARAM>
+      <PARAM context="testpleha" name="testpleha" type="file" filetype="output"
+reqd="yes" stacks="yes">
+         <SYNOPSIS>
+	output background region list
+         </SYNOPSIS>
+         <DESC>
+            <PARA>
+	Output name (root) for background region list.  It should contain a "#"
+	designator to allow the tool to auto-number the files.
+            </PARA>
+         </DESC>
+      </PARAM>
+      <PARAM name="radiusmode" type="string" reqd="yes" def="mul">
+         <SYNOPSIS>
+	  How is background radius determined
+         </SYNOPSIS>
+         <DESC>
+            <PARA>
+	The background radius can either be a fixed annuls (add) or
+	can be a multiple (mul) of the input radius.
+            </PARA>
+         </DESC>
+      </PARAM>
+      <PARAM name="bkgradius" type="real" reqd="yes" def="3">
+         <SYNOPSIS>
+	background radius factor
+         </SYNOPSIS>
+         <DESC>
+            <PARA>
+	Number added to (add) or multiplied with (mul) the input radius
+	to determine background radius.
+            </PARA>
+         </DESC>
+      </PARAM>
+      <PARAM name="group" type="string" def="group">
+         <SYNOPSIS>
+	Controls how blended sources are output.
+         </SYNOPSIS>
+         <DESC>
+            <PARA>
+	If sources are blended (overlapping) then the tool can output
+three different kinds of source (and associated background) lists.  In
+the 'group' method, all the friends-of-friends sources are output in a
+single region file.  So if A touches B and B touches C; you get a file
+with regions A, B, and C.  In the 'individual' method, only the
+sources that touch the "target" source are output.  In the A touches B
+and B touches C example you get 3 regions output:  A with B, B with A
+and C, and C with B.  In the 'exclude' method, the "target" source is
+included, but the touching sources are excluded.  In the A-B-C
+example, the output will have 3 regions, A and not-B, B and not-A and
+not-C, C and not-B.
+            </PARA>
+         </DESC>
+      </PARAM>
+      <PARAM name="targetbkg" type="string" def="all">
+        <SYNOPSIS>
+           make background around all srcs in region or just target?
+        </SYNOPSIS>
+        <DESC>
+          <PARA>
+            The background can either be a single shape co-located at
+the 'target' shape (in the individual and exclude grouping methods) or
+can be a collection of shapes co-located at each of the srcs in the
+src region.  For the 'group' method, the 'all' background is required
+as there is no 'target' source.
+          </PARA>
+        </DESC>
+      </PARAM>
+
+      <PARAM name="maxpix" type="integer" def="INDEF" min="1">
+        <SYNOPSIS>
+	  Number of pixels allowed in overlap checking
+	</SYNOPSIS>
+	<DESC>
+	  <PARA>
+	    When determing overlapping shapes, a pixel list is created
+	at single pixel resolution.  If the number pixels in that list
+	is greater than 'maxpix' then the resolution is increased by 1
+	and the processed repeated until the number of pixels is less
+	than 'maxpix'.  If the value is set to 'INDEF' then there is
+	no maximum.
+	  </PARA>
+        </DESC>
+      </PARAM>
+
+
+      <PARAM name="num_srcs" type="integer" def="">
+        <SYNOPSIS>
+	 After the tool is run, it will contain the number of pairs of
+	src and background files created.
+	</SYNOPSIS>
+    </PARAM>
+
+   </PARAMLIST>
+
+
+
+
+<ADESC title="Common Illustrative example">
+<PARA> Suppose you have the following regions defined</PARA>
+<VERBATIM>
+ellipse(100,100,12,12,0)  # A
+ellipse(110,110,12,12,0)  # B
+ellipse(120,120,12,12,0)  # C
+ellipse(140,140,12,12,0)  # D
+</VERBATIM>
+<PARA>
+(The # and the identifying letter are not part of the regions).  So, A
+overlaps B.  B overlaps A and C.  C overlaps B.  D will fall into the
+background of C.  There are 5 valid combinations of group and
+targetbkg parameters.  In the examples below Al, Bl, Cl and Dl
+represent the background regions around A, B, C, and D respectively.
+</PARA>
+<PARA title="group='group' and targetbkg='all'">
+In this case, you will get 2 source and background files output. 
+</PARA>
+<TABLE><ROW><DATA>SOURCE</DATA><DATA>BACKGROUND</DATA></ROW>
+       <ROW><DATA>A + B + C</DATA><DATA>Al*!A*!B + Bl*!A*!B*!C + Cl*!B*!C*!D</DATA></ROW>
+       <ROW><DATA>D</DATA><DATA>Dl*!C*!D</DATA></ROW>
+</TABLE>
+<PARA title="group='group' and targetbkg='target'">
+  This is not a valid parameter combination and will default to using targetbkg='all'.
+</PARA>
+
+<PARA title="group='exclude' and targetbkg='target'">
+In this case, you get 1 file for each source listed.  Neighboring
+sources are excluded.  The background only is around the target source.
+</PARA>
+<TABLE><ROW><DATA>SOURCE</DATA><DATA>BACKGROUND</DATA></ROW>
+<ROW>
+  <DATA>A*!B</DATA>
+  <DATA>Al*!A*!B</DATA>
+</ROW>
+<ROW>
+  <DATA>B*!A*!C</DATA>
+  <DATA>Bl*!A*!B*!C</DATA>
+</ROW>
+<ROW>
+  <DATA>C*!B</DATA>
+  <DATA>Cl*!B*!C*!D</DATA>
+</ROW>
+<ROW>
+  <DATA>D</DATA>
+  <DATA>Dl*!C*!D</DATA>
+</ROW>
+</TABLE>
+
+<PARA title="group='exclude' and targetbkg='all'">
+In this case, you get 1 file for each source listed.  Neighboring
+sources are excluded, background is from all sources.
+</PARA>
+<TABLE><ROW><DATA>SOURCE</DATA><DATA>BACKGROUND</DATA></ROW>
+<ROW>
+  <DATA>A*!B</DATA>
+  <DATA>Al*!A*!B + Bl*!A*!B</DATA>
+</ROW>
+<ROW>
+  <DATA>B*!A*!C</DATA>
+  <DATA>Bl*!A*!B*!C + Al*!A*!B + Cl*!B*!C*!D</DATA>
+</ROW>
+<ROW>
+  <DATA>C*!B</DATA>
+  <DATA>Cl*!B*!C*!D + Bl*!A*!B*!C</DATA>
+</ROW>
+<ROW>
+  <DATA>D</DATA>
+  <DATA>Dl*!C*!D</DATA>
+</ROW>
+</TABLE>
+
+<PARA title="group='individual' and targetbkg='target'">
+In this case, you get 1 file for each source listed.  Neighboring
+sources are included.
+</PARA>
+<TABLE><ROW><DATA>SOURCE</DATA><DATA>BACKGROUND</DATA></ROW>
+<ROW>
+  <DATA>A + B</DATA>
+  <DATA>Al*!A*!B</DATA>
+</ROW>
+<ROW>
+  <DATA>B + A + C</DATA>
+  <DATA>Bl*!A*!B*!C</DATA>
+</ROW>
+<ROW>
+  <DATA>C + B</DATA>
+  <DATA>Cl*!B*!C*!D</DATA>
+</ROW>
+<ROW>
+  <DATA>D</DATA>
+  <DATA>Dl*!C*!D</DATA>
+</ROW>
+</TABLE>
+
+<PARA title="group='individual' and targetbkg='all'">
+In this case, you get 1 file for each source listed.  Neighboring
+sources are included, background is from all sources.
+</PARA>
+<TABLE><ROW><DATA>SOURCE</DATA><DATA>BACKGROUND</DATA></ROW>
+<ROW>
+  <DATA>A + B</DATA>
+  <DATA>Al*!A*!B + Bl*!A*!B</DATA>
+</ROW>
+<ROW>
+  <DATA>B + A + C</DATA>
+  <DATA>Bl*!A*!B*!C + Al*!A*!B + Cl*!B*!C*!D</DATA>
+</ROW>
+<ROW>
+  <DATA>C + B</DATA>
+  <DATA>Cl*!B*!C*!D + Bl*!A*!B*!C</DATA>
+</ROW>
+<ROW>
+  <DATA>D</DATA>
+  <DATA>Dl*!C*!D</DATA>
+</ROW>
+</TABLE>
+
+
+
+</ADESC>
+
+<ADESC context="testahelp" title="Testahelp Illustrative example">
+<PARA> Suppose you have the following regions defined</PARA>
+<VERBATIM>
+ellipse(100,100,12,12,0)  # A
+ellipse(110,110,12,12,0)  # B
+ellipse(120,120,12,12,0)  # C
+ellipse(140,140,12,12,0)  # D
+</VERBATIM>
+<PARA>
+(The # and the identifying letter are not part of the regions).  So, A
+overlaps B.  B overlaps A and C.  C overlaps B.  D will fall into the
+background of C.  There are 5 valid combinations of group and
+targetbkg parameters.  In the examples below Al, Bl, Cl and Dl
+represent the background regions around A, B, C, and D respectively.
+</PARA>
+<PARA title="group='group' and targetbkg='all'">
+In this case, you will get 2 source and background files output. 
+</PARA>
+<TABLE><ROW><DATA>SOURCE</DATA><DATA>BACKGROUND</DATA></ROW>
+       <ROW><DATA>A + B + C</DATA><DATA>Al*!A*!B + Bl*!A*!B*!C + Cl*!B*!C*!D</DATA></ROW>
+       <ROW><DATA>D</DATA><DATA>Dl*!C*!D</DATA></ROW>
+</TABLE>
+<PARA title="group='group' and targetbkg='target'">
+  This is not a valid parameter combination and will default to using targetbkg='all'.
+</PARA>
+
+<PARA title="group='exclude' and targetbkg='target'">
+In this case, you get 1 file for each source listed.  Neighboring
+sources are excluded.  The background only is around the target source.
+</PARA>
+<TABLE><ROW><DATA>SOURCE</DATA><DATA>BACKGROUND</DATA></ROW>
+<ROW>
+  <DATA>A*!B</DATA>
+  <DATA>Al*!A*!B</DATA>
+</ROW>
+<ROW>
+  <DATA>B*!A*!C</DATA>
+  <DATA>Bl*!A*!B*!C</DATA>
+</ROW>
+<ROW>
+  <DATA>C*!B</DATA>
+  <DATA>Cl*!B*!C*!D</DATA>
+</ROW>
+<ROW>
+  <DATA>D</DATA>
+  <DATA>Dl*!C*!D</DATA>
+</ROW>
+</TABLE>
+
+<PARA title="group='exclude' and targetbkg='all'">
+In this case, you get 1 file for each source listed.  Neighboring
+sources are excluded, background is from all sources.
+</PARA>
+<TABLE><ROW><DATA>SOURCE</DATA><DATA>BACKGROUND</DATA></ROW>
+<ROW>
+  <DATA>A*!B</DATA>
+  <DATA>Al*!A*!B + Bl*!A*!B</DATA>
+</ROW>
+<ROW>
+  <DATA>B*!A*!C</DATA>
+  <DATA>Bl*!A*!B*!C + Al*!A*!B + Cl*!B*!C*!D</DATA>
+</ROW>
+<ROW>
+  <DATA>C*!B</DATA>
+  <DATA>Cl*!B*!C*!D + Bl*!A*!B*!C</DATA>
+</ROW>
+<ROW>
+  <DATA>D</DATA>
+  <DATA>Dl*!C*!D</DATA>
+</ROW>
+</TABLE>
+
+<PARA title="group='individual' and targetbkg='target'">
+In this case, you get 1 file for each source listed.  Neighboring
+sources are included.
+</PARA>
+<TABLE><ROW><DATA>SOURCE</DATA><DATA>BACKGROUND</DATA></ROW>
+<ROW>
+  <DATA>A + B</DATA>
+  <DATA>Al*!A*!B</DATA>
+</ROW>
+<ROW>
+  <DATA>B + A + C</DATA>
+  <DATA>Bl*!A*!B*!C</DATA>
+</ROW>
+<ROW>
+  <DATA>C + B</DATA>
+  <DATA>Cl*!B*!C*!D</DATA>
+</ROW>
+<ROW>
+  <DATA>D</DATA>
+  <DATA>Dl*!C*!D</DATA>
+</ROW>
+</TABLE>
+
+<PARA title="group='individual' and targetbkg='all'">
+In this case, you get 1 file for each source listed.  Neighboring
+sources are included, background is from all sources.
+</PARA>
+<TABLE><ROW><DATA>SOURCE</DATA><DATA>BACKGROUND</DATA></ROW>
+<ROW>
+  <DATA>A + B</DATA>
+  <DATA>Al*!A*!B + Bl*!A*!B</DATA>
+</ROW>
+<ROW>
+  <DATA>B + A + C</DATA>
+  <DATA>Bl*!A*!B*!C + Al*!A*!B + Cl*!B*!C*!D</DATA>
+</ROW>
+<ROW>
+  <DATA>C + B</DATA>
+  <DATA>Cl*!B*!C*!D + Bl*!A*!B*!C</DATA>
+</ROW>
+<ROW>
+  <DATA>D</DATA>
+  <DATA>Dl*!C*!D</DATA>
+</ROW>
+</TABLE>
+
+
+
+</ADESC>
+
+
+<ADESC context="testpleha" title="Testpleha Illustrative example">
+<PARA> Suppose you have the following regions defined</PARA>
+<VERBATIM>
+ellipse(100,100,12,12,0)  # A
+ellipse(110,110,12,12,0)  # B
+ellipse(120,120,12,12,0)  # C
+ellipse(140,140,12,12,0)  # D
+</VERBATIM>
+<PARA>
+(The # and the identifying letter are not part of the regions).  So, A
+overlaps B.  B overlaps A and C.  C overlaps B.  D will fall into the
+background of C.  There are 5 valid combinations of group and
+targetbkg parameters.  In the examples below Al, Bl, Cl and Dl
+represent the background regions around A, B, C, and D respectively.
+</PARA>
+<PARA title="group='group' and targetbkg='all'">
+In this case, you will get 2 source and background files output. 
+</PARA>
+<TABLE><ROW><DATA>SOURCE</DATA><DATA>BACKGROUND</DATA></ROW>
+       <ROW><DATA>A + B + C</DATA><DATA>Al*!A*!B + Bl*!A*!B*!C + Cl*!B*!C*!D</DATA></ROW>
+       <ROW><DATA>D</DATA><DATA>Dl*!C*!D</DATA></ROW>
+</TABLE>
+<PARA title="group='group' and targetbkg='target'">
+  This is not a valid parameter combination and will default to using targetbkg='all'.
+</PARA>
+
+<PARA title="group='exclude' and targetbkg='target'">
+In this case, you get 1 file for each source listed.  Neighboring
+sources are excluded.  The background only is around the target source.
+</PARA>
+<TABLE><ROW><DATA>SOURCE</DATA><DATA>BACKGROUND</DATA></ROW>
+<ROW>
+  <DATA>A*!B</DATA>
+  <DATA>Al*!A*!B</DATA>
+</ROW>
+<ROW>
+  <DATA>B*!A*!C</DATA>
+  <DATA>Bl*!A*!B*!C</DATA>
+</ROW>
+<ROW>
+  <DATA>C*!B</DATA>
+  <DATA>Cl*!B*!C*!D</DATA>
+</ROW>
+<ROW>
+  <DATA>D</DATA>
+  <DATA>Dl*!C*!D</DATA>
+</ROW>
+</TABLE>
+
+<PARA title="group='exclude' and targetbkg='all'">
+In this case, you get 1 file for each source listed.  Neighboring
+sources are excluded, background is from all sources.
+</PARA>
+<TABLE><ROW><DATA>SOURCE</DATA><DATA>BACKGROUND</DATA></ROW>
+<ROW>
+  <DATA>A*!B</DATA>
+  <DATA>Al*!A*!B + Bl*!A*!B</DATA>
+</ROW>
+<ROW>
+  <DATA>B*!A*!C</DATA>
+  <DATA>Bl*!A*!B*!C + Al*!A*!B + Cl*!B*!C*!D</DATA>
+</ROW>
+<ROW>
+  <DATA>C*!B</DATA>
+  <DATA>Cl*!B*!C*!D + Bl*!A*!B*!C</DATA>
+</ROW>
+<ROW>
+  <DATA>D</DATA>
+  <DATA>Dl*!C*!D</DATA>
+</ROW>
+</TABLE>
+
+<PARA title="group='individual' and targetbkg='target'">
+In this case, you get 1 file for each source listed.  Neighboring
+sources are included.
+</PARA>
+<TABLE><ROW><DATA>SOURCE</DATA><DATA>BACKGROUND</DATA></ROW>
+<ROW>
+  <DATA>A + B</DATA>
+  <DATA>Al*!A*!B</DATA>
+</ROW>
+<ROW>
+  <DATA>B + A + C</DATA>
+  <DATA>Bl*!A*!B*!C</DATA>
+</ROW>
+<ROW>
+  <DATA>C + B</DATA>
+  <DATA>Cl*!B*!C*!D</DATA>
+</ROW>
+<ROW>
+  <DATA>D</DATA>
+  <DATA>Dl*!C*!D</DATA>
+</ROW>
+</TABLE>
+
+<PARA title="group='individual' and targetbkg='all'">
+In this case, you get 1 file for each source listed.  Neighboring
+sources are included, background is from all sources.
+</PARA>
+<TABLE><ROW><DATA>SOURCE</DATA><DATA>BACKGROUND</DATA></ROW>
+<ROW>
+  <DATA>A + B</DATA>
+  <DATA>Al*!A*!B + Bl*!A*!B</DATA>
+</ROW>
+<ROW>
+  <DATA>B + A + C</DATA>
+  <DATA>Bl*!A*!B*!C + Al*!A*!B + Cl*!B*!C*!D</DATA>
+</ROW>
+<ROW>
+  <DATA>C + B</DATA>
+  <DATA>Cl*!B*!C*!D + Bl*!A*!B*!C</DATA>
+</ROW>
+<ROW>
+  <DATA>D</DATA>
+  <DATA>Dl*!C*!D</DATA>
+</ROW>
+</TABLE>
+
+
+
+</ADESC>
+
+<BUGS ><PARA>
+	See the
+        <HREF context="testahelp"
+	link="http://cxc.harvard.edu/ciao/bugs/testahelp.html">
+	testahelp bugs page
+	for this tool</HREF>
+        <HREF context="testpleha"
+	link="http://cxc.harvard.edu/ciao/bugs/testpleha.html">testpleha
+	bugs page
+	for this tool</HREF>
+        on the CIAO website for an up-to-date listing of known bugs.
+      </PARA></BUGS>
+   <VERSION><CONDTEXT context="testahelp">TESTHELP 3.0</CONDTEXT><CONDTEXT context="testpleha">TESTPLEHA 5.0</CONDTEXT></VERSION>
+   <LASTMODIFIED><CONDTEXT context="testahelp">June
+	2003</CONDTEXT><CONDTEXT context="testpleha">May 2007</CONDTEXT></LASTMODIFIED>
+
+
+  </ENTRY>
+</cxchelptopics>

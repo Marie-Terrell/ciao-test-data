@@ -1,0 +1,16 @@
+SUBJECT(ahelptest)                                        CONTEXT(tools)
+
+
+PARAM coord
+
+   type=string
+
+   The coordinate system for x and y.
+
+   The coordinate system for x and y. Currently only the sky 
+   pixel or the detector physical coordinate system are allowed. 
+   If SKY is selected the x and y are the sky physical 
+   coordinates of the location on the detector where the user 
+   wants the PSF model. If DET is selected, x and y are the 
+   detector physical coordinates of the location on the detector 
+   where the user wants the PSF model. (SKY|DET)
