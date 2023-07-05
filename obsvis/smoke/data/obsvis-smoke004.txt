@@ -7,7 +7,8 @@
 6. Testing multiple OBSVISGui::Save/Load Basic...PASSED
 7. Testing  OBSVISGui::NewFov...PASSED
 8. Testing OBSVISGui::LoadImageFile...PASSED
-SUMMARY: 8 out of 8 tests passed
+9. Testing  OBSVISGui:: FI Chip On Requirement...PASSED
+SUMMARY: 9 out of 9 tests passed
 *********** Unit Test #22 'OBSVISGui' PASSED ******
 
 UNIT TESTING SUMMARY: 
